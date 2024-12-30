@@ -20,7 +20,6 @@ const Register = () => {
       navigate('/home');
     } catch(e){
       console.log("registration failed",e);
-      
     }
   }
   return (

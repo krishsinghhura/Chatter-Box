@@ -25,8 +25,14 @@ const ChatRoom = () => {
     
     <div className="bg-gray-100 p-4 rounded-b-lg">
       <form className="flex items-center">
-        <input type="text" placeholder="Type a message..." className="bg-gray-300 w-full p-2 border rounded-l-lg focus:outline-none "/>
-        <button type="submit" className="bg-green-700 text-white p-2 rounded-r-lg ml-2"><i className="fa-solid fa-paper-plane"></i></button>
+        <input type="text" placeholder="Type a message..." className="bg-gray-300 w-full p-2 border rounded-lg focus:outline-none "/>
+        <input type="file" id="file" class="hidden"/>
+    
+    <label for="file" 
+           class="flex items-center justify-center bg-green-700 text-white p-2 rounded-lg ml-2 cursor-pointer hover:bg-blue-600">
+            <i class="fa-regular fa-image"></i>
+    </label>
+        <button type="submit" className="bg-green-700 text-white p-2 rounded-lg ml-2"><i className="fa-solid fa-paper-plane"></i></button>
       </form>
     </div>
   </div>
