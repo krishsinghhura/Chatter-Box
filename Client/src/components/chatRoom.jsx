@@ -4,8 +4,9 @@ const ChatRoom = () => {
   return (
     <>
     <div className="bg-white w-full border-solid shadow-lg flex flex-col  ">
-    <div className="bg-green-700 text-white p-4 ">
+    <div className="bg-green-800 text-white p-4 flex justify-between">
       <h2 className="text-xl font-bold">Chat Room</h2>
+      <button className='border-solid p-2 bg-green-700 rounded-lg cursor-pointer hover:bg-blue-600 '>Logout</button>
     </div>
 
     <div className="flex-1 overflow-y-auto p-4 space-y-4">
