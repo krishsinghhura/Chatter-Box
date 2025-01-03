@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const userRoutes = require("./Routes/userRoutes");
+const chatRoutes = require("./Routes/chatRoutes");
 const app = express();
 
 app.use(express.json());
@@ -14,5 +15,7 @@ app.use(
 );
 
 app.use("/", userRoutes);
+
+app.use("/api/chats", chatRoutes);
 
 module.exports = app;
