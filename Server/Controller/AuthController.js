@@ -46,6 +46,7 @@ const login = async (req, res) => {
   }
   try {
     const isPasswordValid = await bcrypt.compare(password, checkUser.password);
+
     if (isPasswordValid) {
       const token = jwt.sign(
         { email, userid: checkUser._id },
@@ -63,16 +64,7 @@ const login = async (req, res) => {
 
 //getting all users
 const allUsers = async (req, res) => {
-  const keyword = req.query.search
-    ? {
-        $or: [
-          { username: { $regex: req.query.search, $options: "i" } },
-          { email: { $regex: req.query.search, $options: "i" } },
-        ],
-      }
-    : {};
-
-  const users = await userModel.find(keyword);
+  const users = await userModel.find();
   res.send(users);
 };
 

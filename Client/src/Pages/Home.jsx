@@ -1,14 +1,10 @@
-import React from 'react'
-import SideBar from '../components/SideBar'
-import ChatRoom from '../components/chatRoom'
+import React, { useEffect } from "react";
+import ChatRoom from "../components/chatRoom";
+import { io } from "socket.io-client";
+import { nanoid } from "nanoid";
 
 const Home = () => {
-  return (
-    <div className='flex'>
-        <SideBar/>
-        <ChatRoom/>
-    </div>
-  )
-}
+  return <ChatRoom />;
+};
 
-export default Home
+export default Home;
